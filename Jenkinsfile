@@ -53,7 +53,7 @@ node {
     stage('build docker') {
         sh "cp -R src/main/docker target/"
         sh "cp target/*.war target/docker/"
-        dockerImage = docker.build('docker-moessid/devops-repo', 'target/docker')
+        dockerImage = docker.build('moessid/devops-repo', 'target/docker')
     }
 
     stage('publish docker') {
